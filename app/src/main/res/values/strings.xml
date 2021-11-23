@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">YBC Aging</string>
+    <string name="background">background</string>
+    <string name="ararat_logo">ararat logo</string>
+    <string name="enter_button">enter button</string>
+    <string name="enter">ENTER</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="date_of_birth">DATE OF BIRTH</string>
+    <string name="please_enter_correct_date">Please enter correct date.</string>
+    <string name="barrel_sizes">BARREL SIZES</string>
+    <string name="height">Height</string>
+    <string name="top_radius">Top radius</string>
+    <string name="mid_radius">Mid radius</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="please_enter_a_value_greater_than_0">Please enter a value greater than 0.</string>
+    <string name="lease_fill_in_all_the_fields">Please fill in all the fields.</string>
+    <string name="you_re_under_18_years_of_age">You\'re under 18 years of age.</string>
+    <string name="volume">Capacity in Liter = %f</string>
+</resources>

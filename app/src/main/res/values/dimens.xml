@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_button_52">52dp</dimen>
+    <dimen name="standard_text_16">16sp</dimen>
+    <dimen name="standard_margin_19">19dp</dimen>
+</resources>

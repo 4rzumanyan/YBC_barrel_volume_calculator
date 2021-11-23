@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/barrels" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ararat_logo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/ararat_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ararat_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_button_52"
+        android:layout_marginHorizontal="65dp"
+        android:layout_marginBottom="100dp"
+        android:contentDescription="@string/enter_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/button" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calc_button"
+        style="@style/ararat_gold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_button_52"
+        android:layout_marginHorizontal="65dp"
+        android:contentDescription="@string/enter_button"
+        android:gravity="center"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/calculate"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/button"
+        app:layout_constraintStart_toStartOf="@id/button" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/height"
+        style="@style/ararat_gold"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/standard_button_52"
+        android:layout_marginHorizontal="@dimen/standard_text_16"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/ararat_gold"
+        android:hint="@string/height"
+        android:inputType="number"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColorHint="@color/ararat_gold"
+        android:textSize="15.5sp"
+        app:layout_constraintBottom_toTopOf="@+id/calc_button"
+        app:layout_constraintEnd_toStartOf="@+id/top_radius"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/top_radius"
+        style="@style/ararat_gold"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/standard_button_52"
+        android:layout_marginHorizontal="@dimen/standard_text_16"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/ararat_gold"
+        android:hint="@string/top_radius"
+        android:inputType="number"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColorHint="@color/ararat_gold"
+        android:textSize="15.5sp"
+        app:layout_constraintBottom_toTopOf="@+id/calc_button"
+        app:layout_constraintEnd_toStartOf="@+id/mid_radius"
+        app:layout_constraintStart_toEndOf="@+id/height" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/mid_radius"
+        style="@style/ararat_gold"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/standard_button_52"
+        android:layout_marginHorizontal="@dimen/standard_text_16"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/ararat_gold"
+        android:hint="@string/mid_radius"
+        android:inputType="number"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColorHint="@color/ararat_gold"
+        android:textSize="15.5sp"
+        app:layout_constraintBottom_toTopOf="@+id/calc_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/top_radius" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/barrel_sizes"
+        style="@style/ararat_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/barrel_sizes"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/top_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/greater0"
+        style="@style/ararat_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_19"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/please_enter_a_value_greater_than_0"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_radius" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/empty1"
+        style="@style/ararat_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_19"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/lease_fill_in_all_the_fields"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_radius" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_19"
+        android:layout_marginTop="@dimen/standard_text_16"
+        android:fontFamily="@font/ararat_font"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="@color/ararat_gold"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_radius" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

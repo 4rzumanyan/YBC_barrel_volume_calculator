@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ararat_gold">
+        <item name="android:textColor">@color/ararat_gold</item>
+        <item name="fontFamily">@font/ararat_font</item>
+    </style>
+
+</resources>
