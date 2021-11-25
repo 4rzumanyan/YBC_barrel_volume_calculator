@@ -9,10 +9,10 @@ class CalcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calc)
-        setUpView()
+        setupView()
     }
 
-    private fun setUpView() {
+    private fun setupView() {
         val calcButton = findViewById<AppCompatTextView>(R.id.calc_button)
         val height = findViewById<AppCompatEditText>(R.id.height)
         val topRadius = findViewById<AppCompatEditText>(R.id.top_radius)
@@ -40,6 +40,10 @@ class CalcActivity : AppCompatActivity() {
                     )
                 )
             result.visible()
+        }
+
+        result.setOnClickListener {
+            shareText(result.text.toString())
         }
     }
 

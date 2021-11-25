@@ -11,15 +11,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setUpView()
+        setupView()
     }
 
-    private fun setUpView() {
+    private fun setupView() {
         val enterButton = findViewById<AppCompatTextView>(R.id.enter_button)
         val day = findViewById<AppCompatEditText>(R.id.day)
         val month = findViewById<AppCompatEditText>(R.id.month)
         val year = findViewById<AppCompatEditText>(R.id.year)
-        val thisYear = Calendar.getInstance().get(Calendar.YEAR);
+        val thisYear = Calendar.getInstance().get(Calendar.YEAR)
         val empty = findViewById<AppCompatTextView>(R.id.empty)
         val notCorrect = findViewById<AppCompatTextView>(R.id.not_correct)
         val under18 = findViewById<AppCompatTextView>(R.id.under18)
