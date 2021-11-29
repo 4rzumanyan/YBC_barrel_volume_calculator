@@ -1,25 +1,32 @@
 package com.example.ybcaging
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
-class CalcActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calc)
-        setupView()
+class CalcActivity : Fragment(R.layout.activity_calc) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupView(view)
     }
 
-    private fun setupView() {
-        val calcButton = findViewById<AppCompatTextView>(R.id.calc_button)
-        val height = findViewById<AppCompatEditText>(R.id.height)
-        val topRadius = findViewById<AppCompatEditText>(R.id.top_radius)
-        val midRadius = findViewById<AppCompatEditText>(R.id.mid_radius)
-        val empty1 = findViewById<AppCompatTextView>(R.id.empty1)
-        val greater0 = findViewById<AppCompatTextView>(R.id.greater0)
-        val result = findViewById<AppCompatTextView>(R.id.result)
+    private fun setupView(view: View) {
+        val backButton = view.findViewById<AppCompatTextView>(R.id.back_button)
+        val calcButton = view.findViewById<AppCompatTextView>(R.id.calc_button)
+        val height = view.findViewById<AppCompatEditText>(R.id.height)
+        val topRadius = view.findViewById<AppCompatEditText>(R.id.top_radius)
+        val midRadius = view.findViewById<AppCompatEditText>(R.id.mid_radius)
+        val empty1 = view.findViewById<AppCompatTextView>(R.id.empty1)
+        val greater0 = view.findViewById<AppCompatTextView>(R.id.greater0)
+        val result = view.findViewById<AppCompatTextView>(R.id.result)
+
+        backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
         calcButton.setOnClickListener {
             empty1.invisible()
             greater0.invisible()
@@ -43,7 +50,7 @@ class CalcActivity : AppCompatActivity() {
         }
 
         result.setOnClickListener {
-            shareText(result.text.toString())
+            requireActivity().shareText(result.text.toString())
         }
     }
 

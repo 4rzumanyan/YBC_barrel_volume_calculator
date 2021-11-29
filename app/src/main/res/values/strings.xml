@@ -18,4 +18,5 @@
     <string name="lease_fill_in_all_the_fields">Please fill in all the fields.</string>
     <string name="you_re_under_18_years_of_age">You\'re under 18 years of age.</string>
     <string name="volume">Capacity in Liter = %f</string>
+    <string name="back"><![CDATA[<]]></string>
 </resources>

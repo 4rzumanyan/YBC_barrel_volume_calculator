@@ -39,7 +39,7 @@
         app:srcCompat="@drawable/button" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/calc_button"
+        android:id="@+id/enter_button"
         style="@style/ararat_gold"
         android:layout_width="match_parent"
         android:layout_height="@dimen/standard_button_52"
@@ -50,89 +50,86 @@
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:text="@string/calculate"
+        android:text="@string/enter"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/button"
         app:layout_constraintStart_toStartOf="@id/button" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/height"
+        android:id="@+id/day"
         style="@style/ararat_gold"
         android:layout_width="0dp"
         android:layout_height="@dimen/standard_button_52"
         android:layout_marginHorizontal="@dimen/standard_text_16"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="@color/ararat_gold"
-        android:hint="@string/height"
+        android:hint="@string/day"
         android:inputType="number"
         android:shadowColor="@color/ararat_brown"
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
         android:textColorHint="@color/ararat_gold"
-        android:textSize="15.5sp"
-        app:layout_constraintBottom_toTopOf="@+id/calc_button"
-        app:layout_constraintEnd_toStartOf="@+id/top_radius"
+        app:layout_constraintBottom_toTopOf="@+id/enter_button"
+        app:layout_constraintEnd_toStartOf="@+id/month"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/top_radius"
+        android:id="@+id/month"
         style="@style/ararat_gold"
         android:layout_width="0dp"
         android:layout_height="@dimen/standard_button_52"
         android:layout_marginHorizontal="@dimen/standard_text_16"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="@color/ararat_gold"
-        android:hint="@string/top_radius"
+        android:hint="@string/month"
         android:inputType="number"
         android:shadowColor="@color/ararat_brown"
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
         android:textColorHint="@color/ararat_gold"
-        android:textSize="15.5sp"
-        app:layout_constraintBottom_toTopOf="@+id/calc_button"
-        app:layout_constraintEnd_toStartOf="@+id/mid_radius"
-        app:layout_constraintStart_toEndOf="@+id/height" />
+        app:layout_constraintBottom_toTopOf="@+id/enter_button"
+        app:layout_constraintEnd_toStartOf="@+id/year"
+        app:layout_constraintStart_toEndOf="@+id/day" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/mid_radius"
+        android:id="@+id/year"
         style="@style/ararat_gold"
         android:layout_width="0dp"
         android:layout_height="@dimen/standard_button_52"
         android:layout_marginHorizontal="@dimen/standard_text_16"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="@color/ararat_gold"
-        android:hint="@string/mid_radius"
+        android:hint="@string/year"
         android:inputType="number"
         android:shadowColor="@color/ararat_brown"
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
         android:textColorHint="@color/ararat_gold"
-        android:textSize="15.5sp"
-        app:layout_constraintBottom_toTopOf="@+id/calc_button"
+        app:layout_constraintBottom_toTopOf="@+id/enter_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/top_radius" />
+        app:layout_constraintStart_toEndOf="@+id/month" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/barrel_sizes"
+        android:id="@+id/date_of_birth"
         style="@style/ararat_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="36dp"
         android:shadowColor="@color/ararat_brown"
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:text="@string/barrel_sizes"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/top_radius"
+        android:text="@string/date_of_birth"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@id/month"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/greater0"
+        android:id="@+id/not_correct"
         style="@style/ararat_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -141,13 +138,28 @@
         android:shadowDx="3"
         android:shadowDy="3"
         android:shadowRadius="10"
-        android:text="@string/please_enter_a_value_greater_than_0"
+        android:text="@string/please_enter_correct_date"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_radius" />
+        app:layout_constraintTop_toBottomOf="@id/month" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/empty1"
+        android:id="@+id/under18"
+        style="@style/ararat_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_19"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/you_re_under_18_years_of_age"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/month" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/empty"
         style="@style/ararat_gold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -159,41 +171,6 @@
         android:text="@string/lease_fill_in_all_the_fields"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_radius" />
+        app:layout_constraintTop_toBottomOf="@id/month" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/standard_margin_19"
-        android:layout_marginTop="@dimen/standard_text_16"
-        android:fontFamily="@font/ararat_font"
-        android:shadowColor="@color/ararat_brown"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        android:textColor="@color/ararat_gold"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_radius" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/back_button"
-        android:layout_width="@dimen/standard_button_52"
-        android:layout_height="@dimen/standard_button_52"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="@dimen/standard_margin_19"
-        android:fontFamily="@font/aliment"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:shadowColor="@color/ararat_brown"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        android:text="@string/back"
-        android:textColor="@color/ararat_gold"
-        android:textSize="44sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

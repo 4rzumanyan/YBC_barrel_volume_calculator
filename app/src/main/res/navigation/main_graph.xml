@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/dateActivity">
+    <fragment
+        android:id="@+id/dateActivity"
+        android:name="com.example.ybcaging.DateActivity"
+        android:label="DateActivity"
+        tools:layout="@layout/activity_date">
+        <action
+            android:id="@+id/action_dateActivity_to_calcActivity"
+            app:destination="@id/calcActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/calcActivity"
+        android:name="com.example.ybcaging.CalcActivity"
+        android:label="CalcActivity"
+        tools:layout="@layout/activity_calc"/>
+</navigation>
