@@ -178,22 +178,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/top_radius" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_button"
-        android:layout_width="@dimen/standard_button_52"
-        android:layout_height="@dimen/standard_button_52"
-        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_16"
         android:layout_marginTop="@dimen/standard_margin_19"
-        android:fontFamily="@font/aliment"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:shadowColor="@color/ararat_brown"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="10"
-        android:text="@string/back"
-        android:textColor="@color/ararat_gold"
-        android:textSize="44sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

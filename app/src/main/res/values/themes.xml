@@ -14,5 +14,10 @@
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+
+        <item name="popupMenuBackground">@color/transparent</item>
+        <item name="android:textColor">@color/ararat_gold</item>
+        <item name="fontFamily">@font/ararat_font</item>
+
     </style>
 </resources>

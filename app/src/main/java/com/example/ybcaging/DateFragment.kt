@@ -1,14 +1,18 @@
 package com.example.ybcaging
 
 import android.os.Bundle
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import java.util.*
 
-class DateActivity : Fragment(R.layout.activity_date) {
+class DateFragment : Fragment(R.layout.activity_date) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView(view)
@@ -23,6 +27,10 @@ class DateActivity : Fragment(R.layout.activity_date) {
         val empty = view.findViewById<AppCompatTextView>(R.id.empty)
         val notCorrect = view.findViewById<AppCompatTextView>(R.id.not_correct)
         val under18 = view.findViewById<AppCompatTextView>(R.id.under18)
+        val languageMenu = view.findViewById<AppCompatTextView>(R.id.language_menu)
+        languageMenu.setOnClickListener {
+            showPopup(languageMenu)
+        }
         enterButton.setOnClickListener {
             empty.invisible()
             under18.invisible()
@@ -38,10 +46,29 @@ class DateActivity : Fragment(R.layout.activity_date) {
             )
                 notCorrect.visible()
             else if (thisYear - (year.text.toString().toInt()) >= 18)
-                findNavController().navigate(R.id.action_dateActivity_to_calcActivity)
+                findNavController().navigate(R.id.menuFragment)
             else
                 under18.visible()
         }
+    }
+
+    private fun showPopup(v: View) {
+        val popup = PopupMenu(requireContext(), v)
+        popup.inflate(R.menu.popup_menu)
+        popup.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.arm_language -> {
+                    Toast.makeText(
+                        requireContext(),
+                        "Armenian version will be available soon.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    true
+                }
+                else -> true
+            }
+        }
+        popup.show()
     }
 }
 

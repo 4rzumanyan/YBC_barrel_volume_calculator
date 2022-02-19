@@ -10,4 +10,5 @@
     <color name="ararat_blue">#FF0D313F</color>
     <color name="ararat_gold">#FFECDFAA</color>
     <color name="ararat_brown">#FF3d231a</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

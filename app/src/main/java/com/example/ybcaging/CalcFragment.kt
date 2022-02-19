@@ -3,18 +3,19 @@ package com.example.ybcaging
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
-class CalcActivity : Fragment(R.layout.activity_calc) {
+class CalcFragment : Fragment(R.layout.activity_calc) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView(view)
     }
 
     private fun setupView(view: View) {
-        val backButton = view.findViewById<AppCompatTextView>(R.id.back_button)
+        val backButton = view.findViewById<AppCompatImageView>(R.id.back_button)
         val calcButton = view.findViewById<AppCompatTextView>(R.id.calc_button)
         val height = view.findViewById<AppCompatEditText>(R.id.height)
         val topRadius = view.findViewById<AppCompatEditText>(R.id.top_radius)

@@ -17,6 +17,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/barrels" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/language_menu"
+        style="@style/ararat_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin_19"
+        android:layout_marginEnd="@dimen/standard_margin_19"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:text="@string/eng"
+        android:textSize="@dimen/standard_text_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ararat_logo"
         android:layout_width="match_parent"
