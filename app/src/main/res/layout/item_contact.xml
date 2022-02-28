@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/worker_image"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_margin="@dimen/standard_margin_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/worker" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/gold_frame"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:background="@drawable/profile_image_background"
+        app:layout_constraintStart_toStartOf="@id/worker_image"
+        app:layout_constraintTop_toTopOf="@id/worker_image" />
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_16"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/ararat_font"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="@color/ararat_gold"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/worker_image"
+        app:layout_constraintBottom_toTopOf="@id/position"
+        tools:text="John" />
+
+    <TextView
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/ararat_font"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="@color/ararat_gold"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/firstname"
+        app:layout_constraintTop_toTopOf="@id/firstname"
+        tools:text="Smith" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_16"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/ararat_font"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="@color/ararat_gold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/worker_image"
+        app:layout_constraintBottom_toTopOf="@id/phone_number"
+        tools:text="Worker" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin_16"
+        android:fontFamily="@font/ararat_font"
+        android:shadowColor="@color/ararat_brown"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="10"
+        android:textColor="@color/ararat_gold"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/worker_image"
+        app:layout_constraintBottom_toBottomOf="@id/worker_image"
+        tools:text="077777777" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
