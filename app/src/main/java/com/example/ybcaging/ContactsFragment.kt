@@ -29,53 +29,46 @@ class ContactsFragment : Fragment(R.layout.activity_contacts) {
 
     private fun createContacts(): List<Contact> = listOf(
         Contact(
-            "https://scontent.fevn6-3.fna.fbcdn.net/v/t31.18172-8/25300022_1233962553401189_1656134277769489915_o.jpg?_nc_cat=106&cb=c578a115-2e46c7d2&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=R1CPGhGn7OcAX9AEUDf&_nc_ht=scontent.fevn6-3.fna&oh=00_AT820UmNeaS93YpFKmZrYOvn0DfqWCBGLhza8mIL8vIung&oe=61E18EEA",
-            "Artem",
-            "Jraghatspanyan",
+            "https://www.surehire.com/wp-content/uploads/2021/10/5-key-Elements-of-a-Lone-Worker-policy.png.webp",
+            "John",
+            "Smith",
             "Ageing Workshops Manager",
-            "095954438"
+            "731-985-6412"
         ),
         Contact(
-            "",
-            "Vahe",
-            "Ghazaryan",
+            "https://img.freepik.com/free-photo/confident-young-male-engineer-wearing-safety-helmet-uniform-standing-profile-view-looking-side-while-keeping-arms-crossed-isolated-white-background-with-copy-space_141793-133104.jpg",
+            "Liam",
+            "Johnson",
             "Engineer-technologist",
-            "055696869"
+            "202-555-0121"
         ),
         Contact(
             "https://scontent.fevn6-2.fna.fbcdn.net/v/t1.18169-9/12809646_116616615399488_8735848977373582110_n.jpg?_nc_cat=101&cb=c578a115-2e46c7d2&ccb=1-5&_nc_sid=174925&_nc_ohc=ODwJyBVAvWUAX-m5wMT&_nc_ht=scontent.fevn6-2.fna&oh=00_AT_2eC3iT_ubZAZt9t6yUPQUPTFLbpGsjmSy549JoMVhdA&oe=61E1E35A",
-            "Hayk",
-            "Mirzoyan",
+            "Noah",
+            "Williams",
             "Barrel-maker",
-            "041994050"
+            "786-986-1682"
+        ),
+        Contact(
+            "https://media.istockphoto.com/id/163204230/photo/young-construction-worker-carrying-wood-boards.jpg?s=612x612&w=0&k=20&c=fImTSVkOFQqwiyc2keRYbQQCOFfwSMMkrCCKN7d6ujY=",
+            "Oliver",
+            "Brown",
+            "Cognac Spirit Processing Worker",
+            "254-378-8024"
         ),
         Contact(
             "",
-            "Tigran",
-            "Sahakyan",
+            "Elijah",
+            "Jones",
             "Cognac Spirit Processing Worker",
-            "094209012"
-        ),
-        Contact(
-            "",
-            "Artur",
-            "Fandunts",
-            "Cognac Spirit Processing Worker",
-            "077076177"
+            "316-892-9719"
         ),
         Contact(
             "https://scontent.fevn6-1.fna.fbcdn.net/v/t1.18169-9/14963159_1099199023533765_5746824400089907211_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=rpq7JAPthXYAX-s7zKu&tn=AEtzMbQ8ObOeNdiP&_nc_ht=scontent.fevn6-1.fna&oh=00_AT9vJ-67Zm6sC9gimn5oJsxPA8yJGHTOgzN2S9WB4oSLag&oe=61E13636",
-            "Nikolay",
-            "Sarafyan",
+            "Lucas",
+            "Garcia",
             "Cognac Spirit Processing Worker",
-            "098154656"
-        ),
-        Contact(
-            "",
-            "Hrant",
-            "Arzumanyan",
-            "Cognac Spirit Processing Worker",
-            "094908590"
+            "954-277-1376"
         )
     )
 }
